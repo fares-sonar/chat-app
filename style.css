@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+}
+
+body{
+    display: flex;
+    position: relative;
+    background-color: hsl(270, 20%, 96%);
+    font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+}
+
+.violet{
+    position: absolute;
+    top: 0;
+    left: -8rem;
+    background-image: linear-gradient(to top right,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    border-radius: 0 0 50% 50%;
+    width: 35%;
+    height: 85%;
+    z-index: -100;
+}
+.light-violet{
+    position: absolute;
+    bottom: 0;
+    right: -8rem;
+    /* background-image: linear-gradient(to top right,hsl(264, 100%, 61%),hsl(293, 100%, 63%)); */
+    background-color: hsl(270, 7%, 64%);
+    opacity: .1;
+    border-radius: 50% 50% 0 0;
+    width: 35%;
+    height: 85%;
+    z-index: -100;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    max-width: 991px;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    .container{
+        flex-wrap:nowrap;
+    }
+}
+
+@media(max-width: 991px){
+    .container .phone{
+        max-width: 70% !important;
+    }
+    .light-violet{
+        display: none;
+    }
+}
+@media(max-width: 450px){
+    .container .phone{
+        max-width: 100% !important;
+        margin: 1rem;
+        
+    }
+
+
+}
+.container .phone{
+    flex: 1 1 30rem;
+    background-color: white;
+    box-shadow: 0px 2px 22px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 2.5rem;
+    max-width: 35%;
+    position: relative;
+}
+
+.container .phone::before{
+    position: absolute;
+    content: " ";
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    z-index: 1;
+}
+
+.container .chat{
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 2rem;
+    max-width: 100%;
+}
+
+.container .head{
+    background-image: linear-gradient(to right,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    border-radius: 2rem 2rem 0 0;
+    padding:2rem 1rem 1rem;
+    margin-bottom:.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container .head img{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 1rem;
+    border-radius: 50%;
+    background-color: white;
+    padding: .1rem;
+}
+
+.container .title h1{
+    font-size: 1rem;
+    color: hsl(276, 100%, 81%);
+    font-weight: 500;
+}
+
+.container .title span{
+    color: hsl(270, 20%, 96%);
+    font-size: 10px;
+    
+}
+
+.container .head i{
+    color: white;
+}
+
+.container .head i:last-child{
+    color: hsl(270, 20%, 96%);
+    position:absolute;
+    right: 1rem;
+}
+
+.container .chat-content{
+    padding: .5rem;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+.container .chat-content .box{
+    max-width: 13rem;
+}
+.container .chat-content .box p{
+    background-color:   hsl(289, 100%, 72%,.1);
+    font-size: 12px;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    
+}
+.container .chat-content picture{
+    text-align: right;
+}
+.container .chat-content .left{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.container .chat-content .left p{
+    background-color: white;
+}
+
+.container .chat-content picture img{
+    width: 3rem;
+    height: 3rem;
+    margin-left: .5rem;
+    border-radius: 1rem;
+}
+
+.container .chat-content .time-price{
+    color: white;
+    background-image: linear-gradient(to right,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    padding: .9rem;
+    margin-bottom: .5rem;
+    border-radius: 1.3rem 1.3rem 1.3rem .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .chat-content .time-price span{
+    font-size: 12px;
+}
+.container .chat-content .time-price h2{
+    font-size: 1rem;
+}
+
+.container .send{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: .5rem 0;
+    border-radius: 2rem;
+
+}
+
+.container .send i{
+    background-color: hsl(271, 36%, 24%);
+    color: white;
+    padding: .5rem;
+    border-radius: 50%;
+    font-size: .8rem;
+    font-weight: bolder;
+}
+
+.container .content-text{
+    flex: 1 1 30rem;
+    padding: 1rem;
+}
+
+.container .content-text h1{
+    margin-bottom: 1rem;
+    color: hsl(271, 36%, 24%);
+}
+
+.container .content-text p{
+    color:hsl(270, 7%, 64%);
+    line-height: 1.6;
+}
+
+@media(max-width:768px){
+    .container .content-text{
+        text-align: center;
+    }
+}
